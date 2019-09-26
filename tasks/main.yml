@@ -22,6 +22,10 @@
     java_packages: "{{ __java_packages | list }}"
   when: java_packages is not defined
 
+#- name: Get Java home dir
+#  command: 
+#  register: javahome
+
 # Setup/install tasks.
 - include_tasks: setup-RedHat.yml
   when: ansible_os_family == 'RedHat'
