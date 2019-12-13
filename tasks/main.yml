@@ -23,7 +23,7 @@
   when: java_packages is not defined
 
 #- name: Get Java home dir
-#  command: 
+#  command: java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.home' | cut -d "=" -f 2 | printf "%s"
 #  register: javahome
 
 # Setup/install tasks.
